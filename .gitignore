@@ -1,0 +1,23 @@
+#Ignore virtual environment
+venv/
+.env
+
+#Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+#Ignore logs and system files
+logs/
+*.log
+.DS_Store
+
+#Ignore Jupyter Notebook checkpoints (if using notebooks)
+.ipynb_checkpoints/
+
+#Ignore environment files
+requirements.txt.lock
+
+#Ignore VSCode and PyCharm settings
+.vscode/
+.idea/
