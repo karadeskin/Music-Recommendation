@@ -2,20 +2,22 @@
 
 ## Overview
 
-This project implements a **content-based music recommendation system** using **PCA (Principal Component Analysis)** and **Nearest Neighbors**. It analyzes song characteristics such as **danceability, energy, tempo, and valence** to recommend similar songs based on a given input track.
+This project implements a **content-based music recommendation system** using **Principal Component Analysis (PCA)** and **K-Nearest Neighbors (KNN)**.  
+It analyzes song characteristics such as **danceability, energy, tempo, and valence** to recommend similar songs based on a given input track.
 
-## Dataset
+## **Dataset**
+The dataset consists of **pre-collected Spotify song features**.  
+It includes the following features:
 
-The dataset consists of various Spotify songs with audio features extracted from the Spotify API. It includes the following features:
-- `danceability`: A measure of how suitable a track is for dancing.
-- `energy`: The intensity and activity level of a song.
-- `loudness`: The overall volume of the track.
-- `speechiness`: The presence of spoken words in a track.
-- `acousticness`: The likelihood of a track being acoustic.
-- `instrumentalness`: The probability of the track being instrumental.
-- `liveness`: The presence of a live audience.
-- `valence`: The musical positiveness conveyed by a track.
-- `tempo`: The estimated beats per minute (BPM).
+- **Danceability**: A measure of how suitable a track is for dancing.
+- **Energy**: The intensity and activity level of a song.
+- **Loudness**: The overall volume of the track.
+- **Speechiness**: The presence of spoken words in a track.
+- **Acousticness**: The likelihood of a track being acoustic.
+- **Instrumentalness**: The probability of the track being instrumental.
+- **Liveness**: The presence of a live audience.
+- **Valence**: The musical positiveness conveyed by a track.
+- **Tempo**: The estimated beats per minute (BPM).
 
 The dataset is stored in **`data/spotify_songs.csv`**.
 
@@ -86,10 +88,9 @@ Once the server is running, open your browser and enter:
 
 ## Model Evaluation
 
-The recommendation model is based on **content similarity** using **PCA and cosine distance**.  
-- **PCA (Principal Component Analysis)** reduces dimensionality, making similarity computations faster while preserving key song features.
-- **Cosine similarity** is used to measure the distance between songs in the feature space, ensuring relevant recommendations.
-- **K-Nearest Neighbors (KNN)** identifies the most similar tracks based on compressed feature representation.
+The recommendation model is based on content similarity using PCA and Nearest Neighbors with cosine similarity:
+* PCA (Principal Component Analysis) reduces dimensionality, improving efficiency while preserving key song features.
+* K-Nearest Neighbors (KNN) with cosine similarity is applied to the PCA-transformed feature space to find the most similar songs.
 
 ## Future Improvements 
 
@@ -100,6 +101,6 @@ The recommendation model is based on **content similarity** using **PCA and cosi
 
 ## Acknowledgements 
 
-* Spotify for providing song data via its API.
+* Spotify dataset for providing pre-extracted song features.
 * scikit-learn for machine learning tools (PCA, Nearest Neighbors).
 * pandas & NumPy for data handling and preprocessing.
