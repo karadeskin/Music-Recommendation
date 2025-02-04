@@ -56,26 +56,35 @@ pip install -r requirements.txt
 
 Run `app.py` to input a song and receive recommendations:
 ```bash
-python(3) src/app.py
+python3 src/app.py  #for macOS/Linux
+python src/app.py   #for Windows
 ```
 Alternatively, you can directly test the recommender:
 ```bash
-python(3) src/recommender.py
+python3 src/recommender.py #for MacOS/Linux
+python src/recommender.py #for Windows 
 ```
 
 ### Step 2: Get Recommendations
 
-Once the script is running, enter a song name from the dataset to receive a list of recommended tracks.
+Once the server is running, open your browser and enter:
+```bash
+http://127.0.0.1:5000/recommend?song=Shape of You
+```
 
-## Model Evaluation 
+## Model Evaluation
 
-The recommendation model is based on content similarity using PCA and cosine distance. The model finds the nearest songs based on their compressed feature representation, making it computationally efficient.
+The recommendation model is based on **content similarity** using **PCA and cosine distance**.  
+- **PCA (Principal Component Analysis)** reduces dimensionality, making similarity computations faster while preserving key song features.
+- **Cosine similarity** is used to measure the distance between songs in the feature space, ensuring relevant recommendations.
+- **K-Nearest Neighbors (KNN)** identifies the most similar tracks based on compressed feature representation.
 
 ## Future Improvements 
 
 * Improve the recommendation model by incorporating collaborative filtering.
 * Expand the dataset with more diverse genres and artists.
-* Implement a simple web interface using Flask or Streamlit.
+* Implement a simple web interface using Flask.
+* Deploy the API using platforms like Render, Railway, or Heroku. 
 
 ## Acknowledgements 
 
