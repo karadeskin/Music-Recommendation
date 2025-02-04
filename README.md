@@ -81,7 +81,7 @@ python src/recommender.py #Windows
 
 Once the server is running, open your browser and enter:
 ```bash
-http://127.0.0.1:5000/recommend?song=Shape of You
+"http://127.0.0.1:5000/recommend?song=Shape of You"
 ```
 
 ## Model Evaluation
