@@ -56,13 +56,13 @@ pip install -r requirements.txt
 
 Run `app.py` to input a song and receive recommendations:
 ```bash
-python3 src/app.py  #for macOS/Linux
-python src/app.py   #for Windows
+python3 src/app.py  #macOS/Linux
+python src/app.py   #Windows
 ```
 Alternatively, you can directly test the recommender:
 ```bash
-python3 src/recommender.py #for MacOS/Linux
-python src/recommender.py #for Windows 
+python3 src/recommender.py #macOS/Linux
+python src/recommender.py #Windows 
 ```
 
 ### Step 2: Get Recommendations
