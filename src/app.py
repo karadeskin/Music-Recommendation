@@ -2,8 +2,15 @@
 from flask import Flask, request, jsonify
 from recommender import recommend_songs
 
+#initialize flask app
 app = Flask(__name__)
 
+#defining home route 
+@app.route('/')
+def home():
+    return "welcome to my music recommendation API! Use /recommend?song=<song_name> to get recommendations."
+
+#recommend endpt 
 @app.route('/recommend', methods=['GET'])
 def recommend():
     song_name = request.args.get('song', '').strip()
