@@ -19,6 +19,18 @@ The dataset consists of various Spotify songs with audio features extracted from
 
 The dataset is stored in **`data/spotify_songs.csv`**.
 
+## Project Structure 
+```bash
+Music-Recommendation/
+│── src/
+│   ├── recommender.py      #loads & preprocesses dataset, applies PCA, trains KNN model
+│   ├── app.py              #runs the recommendation system via Flask API
+│── data/
+│   ├── spotify_songs.csv   #dataset with extracted song features
+│── requirements.txt        #dependencies for running the project
+│── README.md               #project documentation
+```
+
 ## Files
 
 - `src/recommender.py`: Loads and preprocesses the dataset, applies PCA, trains a Nearest Neighbors model, and provides song recommendations.
