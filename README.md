@@ -81,10 +81,19 @@ python src/recommender.py #Windows
 
 ### Step 2: Get Recommendations
 
-Once the server is running, open your browser and enter:
+Once the server is running, open your browser and enter one of the following:
+
+- JSON results:
 ```bash
-"http://127.0.0.1:5000/recommend?song=Shape of You"
+http://127.0.0.1:5000/recommend?song=Shape%20of%20You&k=5
 ```
+
+- Pretty web interface:
+```bash
+http://127.0.0.1:5000/recommend/ui?song=Blinding%20Lights&k=5
+```
+
+![Demo Screenshot](docs/demo.png)
 
 ## Model Evaluation
 
